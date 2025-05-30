@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Muhangi Gaston - Professional Portfolio
 
 ## Overview
@@ -33,3 +34,6 @@ Advanced portfolio showcasing expertise in AI, Quantum Computing, and Military-g
 
 ## License
 © 2025 Muhangi Gaston. All rights reserved.
+=======
+# profile-page
+>>>>>>> 89735cc23eebd2de598c4f548add5186f95b8b07
