@@ -1,39 +1,29 @@
-<<<<<<< HEAD
 # Muhangi Gaston - Professional Portfolio
 
 ## Overview
 Advanced portfolio showcasing expertise in AI, Quantum Computing, and Military-grade Cybersecurity solutions.
 
-## Key Features
-- 🎓 Education & Internship Experience
-- 💻 Technical Skills Showcase
-- 🚀 Featured Projects
-- 🔒 Military-grade Security Focus
+### Features
+- 🎓 Education & Experience Showcase
+- 💻 Technical Skills Display
+- 🚀 Interactive Project Gallery
+- 🤖 AI Assistant Integration
+- 🔒 Military-Grade Security Focus
 - 🌐 Responsive Design
 
-## Technologies Used
-- HTML5
-- CSS3
-- Font Awesome Icons
-- Custom Animations
-- Military-themed UI/UX
+### Technologies
+- HTML5/CSS3
+- JavaScript
+- 3D Animations
+- AI Integration
+- Responsive Design
 
-## Projects Highlighted
-- Atlas Military AI Assistant
-- Grandfather Paradox System Control
-- Paton AI Love 7.0
-- Military-Grade Network Toolkit
-- School Management Portal
-- Portfolio Website
+### Live Demo
+Visit [GSS-TEC Portfolio](https://gastonsoftwaresolutionstec.vercel.app)
 
-## Contact
-- 📍 Kampala, Uganda
+### Contact
 - 📧 gastonsoftwaresolutionstec234@gmail.com
 - 🔗 [GitHub](https://github.com/GSS-creator)
 - 🔗 [LinkedIn](https://www.linkedin.com/in/gaston-software-solutions-tec-gss-tec-490030261)
 
-## License
 © 2025 Muhangi Gaston. All rights reserved.
-=======
-# profile-page
->>>>>>> 89735cc23eebd2de598c4f548add5186f95b8b07

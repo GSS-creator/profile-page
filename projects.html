@@ -83,7 +83,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card education">
                     <i class="fas fa-school project-icon"></i>
                     <h3>Good Hope Divine School Portal</h3>
                     <p>Full-stack school management system with comprehensive features.</p>
@@ -95,7 +95,7 @@
                     <a href="https://goodhopedivinesecondaryschool.vercel.app" target="_blank" class="project-link">View Project →</a>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card education">
                     <i class="fas fa-code project-icon"></i>
                     <h3>Gaston Software Solutions</h3>
                     <p>Interactive tech portfolio showcasing AI/ML and cybersecurity projects.</p>
@@ -108,6 +108,32 @@
             </div>
         </div>
     </section>
+
+    <div class="ai-assistant">
+        <div class="ai-cube" id="aiToggle">
+            <div class="cube-face front">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="cube-face back">AI</div>
+            <div class="cube-face right">GSS</div>
+            <div class="cube-face left">TEC</div>
+            <div class="cube-face top">🤖</div>
+            <div class="cube-face bottom">💡</div>
+        </div>
+        <div class="chat-container" style="display: none;">
+            <div class="chat-messages">
+                <div class="ai-message">
+                    <span class="typing-animation">Hello! I'm GSS-TEC AI. How can I assist you today?</span>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type your question..." id="userInput">
+                <button id="sendButton">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="marquee-container">
@@ -124,5 +150,61 @@
             <p>&copy; 2025 Muhangi Gaston. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const aiToggle = document.getElementById('aiToggle');
+    const chatContainer = document.querySelector('.chat-container');
+    const userInput = document.getElementById('userInput');
+    const sendButton = document.getElementById('sendButton');
+    const chatMessages = document.querySelector('.chat-messages');
+
+    // Toggle chat window
+    aiToggle.addEventListener('click', () => {
+        chatContainer.style.display = chatContainer.style.display === 'none' ? 'block' : 'none';
+    });
+
+    function addMessage(text, isAi = false) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = isAi ? 'ai-message' : 'user-message';
+        messageDiv.innerHTML = `<span class="${isAi ? 'typing-animation' : ''}">${text}</span>`;
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function handleUserInput() {
+        const text = userInput.value.trim();
+        if (text) {
+            addMessage(text, false);
+            userInput.value = '';
+            
+            // Simulate AI response
+            setTimeout(() => {
+                const response = getAiResponse(text.toLowerCase());
+                addMessage(response, true);
+            }, 500);
+        }
+    }
+
+    function getAiResponse(input) {
+        if (input.includes('military') || input.includes('security')) {
+            return "I can tell you about our military-grade projects like Atlas AI Assistant and Network Security Toolkit. What would you like to know?";
+        } else if (input.includes('quantum') || input.includes('paradox')) {
+            return "Our Grandfather Paradox System uses quantum computing principles to simulate complex scenarios. Would you like technical details?";
+        } else if (input.includes('ai') || input.includes('artificial')) {
+            return "We specialize in various AI solutions, from emotional AI to tactical analysis systems. Which area interests you?";
+        } else if (input.includes('education') || input.includes('school')) {
+            return "Our educational solutions include the Good Hope Divine School Portal. Would you like to see a demo?";
+        } else {
+            return "I'm here to help! Ask me about our military, quantum computing, AI solutions, or educational projects.";
+        }
+    }
+
+    sendButton.addEventListener('click', handleUserInput);
+    userInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') handleUserInput();
+    });
+});
+</script>
 </body>
 </html>
